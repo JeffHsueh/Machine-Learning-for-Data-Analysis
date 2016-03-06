@@ -19,7 +19,7 @@ from sklearn.ensemble import ExtraTreesClassifier
 #Load the dataset
 
 AH_data = pd.read_csv("tree_ool_pds.csv")
-AH_data = data_clean.dropna()
+data_clean = AH_data.dropna()
 #data_clean.dtypes
 #data_clean.describe()
 
@@ -94,7 +94,7 @@ print (data_clean['is_white'])
 data_clean['is_black'] = data_clean.apply(lambda row : is_black(row),axis=1)
 print (data_clean['is_black'])
 
-data_clean.dropna()
+data_clean = data_clean.dropna()
 data_clean.dtypes
 data_clean.describe()
 
